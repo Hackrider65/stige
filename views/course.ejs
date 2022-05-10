@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iqra instititute | Courses </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    border: 0;
+    font-family: poppins, sans-serif;
+}
+
+.logo{
+    width: 150px;
+    cursor: pointer;
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 100px;
+    border-bottom: solid 1px rgb(102, 33, 102);
+    position: absolute;
+    
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    
+}
+.navbar ul li ::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: rgb(114, 18, 114);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+    display: block;
+}
+.navbar ul li :hover::after{
+    width: 100%;
+}
+.mainMenu .closeMenu{
+    display:none;
+}
+.navbar .openMenu{
+    display: none;
+}
+
+
+.navbar ul li a{
+    color: rgb(80, 12, 80);
+    transition: -5s;
+  }
+  .navbar ul li a:hover {
+    color: rgb(164, 13, 202);
+    display: block;
+  }
+  .coursebody{
+    position: absolute;
+    background: url(/images/coursebg.jpg) no-repeat center;
+    background-size: 100%;
+    width: 85%;
+    padding: 35px 0;
+    margin: auto;
+    margin: 0 100px;
+    text-align: center;
+    align-items: center;
+    margin-top: 200px;
+    color: rgb(102, 33, 102);
+    height: 30vh;
+}
+.coursebody h1{
+    font-size: 3.5rem;
+    font-weight: 900;
+}
+.coursebody p{
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+/* subsections of movies */
+
+.movie_sec {
+    padding-top: 500px;
+    width: 100%;
+    /* border: 1px solid white; */
+    margin-bottom: 8rem;
+  }
+  
+  .movie_sec section {
+    width: 95%;
+    margin: auto;
+    margin-top: 2em;
+  }
+  .movie_sec section .sec_header {
+    padding: 0.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .movie_sec section .sec_header h3 {
+    text-align: left;
+    font-size: 1.4rem;
+    margin: 0;
+  }
+  
+  .movie_sec section .film_sec {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+  .movie_sec section .film_sec .mov_img {
+    /* margin-right: 0.7rem; */
+    width: 19%;
+    min-width: 230px;
+  }
+  
+  .movie_sec section .film_sec .mov_img img {
+    width: 100%;
+  }
+  
+  .movie_sec section .film_sec .mov_img .vplay:hover {
+    cursor: pointer;
+  }
+  
+  
+  @media(max-width: 768px){
+    .navbar{
+        margin: 5px;
+        padding: 15px 45px;
+    }
+    .navbar ul li{
+        position: relative;
+        display: block ;
+        margin: 10px 0;
+        
+    }
+    .mainMenu{
+        position: absolute;
+        background-color: rgb(164, 13, 202);
+        height: 100vh;
+        width: 32%;
+        top: 0px;
+        right: 0px;
+        text-align: left;
+        z-index: 2;
+        margin-left: 0;
+        
+    }
+.mainMenu .closeMenu{
+        display: block;
+        width: 20px;
+        margin-top: 15px;
+        cursor: pointer;
+    }
+    .navbar .openMenu{
+        display: block;
+        width: 30px;
+        margin-top: 15px;
+        cursor: pointer;
+    }  
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="/images/logo.png" alt="" class="logo">
+        <div class="mainMenu">
+            
+            <ul >
+               <img src="Stige/public/close.png" alt="" class="closeMenu">
+                
+                <li><a href="/">HOME</a></li>
+                <li><a href="/task">TASKS</a></li>
+                <li><a href="/userprofile">MY PROFILE</a></li>
+                <li><a href="/logout">LOG OUT</a></li>
+            </ul>
+        </div>
+    <img src="/images/menu.png" alt="" class="openMenu" width="30px" id="demo">
+    </nav>
+</header>
+<section>
+    <div class="coursebody">
+    <h1>WARM WELCOME, LEARNER,</h1>
+    <p>We're happy to see you here, <br>
+    EXPLORE YOUR FAVOURITE COURSES BELOW <br>
+Happy Learning!</p>
+</div>
+</section>
+<section>
+<div class="movie_sec">
+    <section class="Drama">
+      <div class="sec_header">
+        <h3>SCIENCE & TECHNOLOGY</h3>
+      </div>
+      <div class="film_sec">
+        <div class="mov_img">
+          <a href="courses"><img src="/images/image1science.jpg" alt="" class="vplay" /></a>
+        
+        </div>
+        <div class="mov_img">
+            <a href="/courses"><img src="/images/image2science.png" alt="" class="vplay" /></a>
+        </div>
+        <div class="mov_img">
+            <a href="/courses"><img src="/images/image3science.jpg" alt="" class="vplay" /></a>
+        </div>
+        <div class="mov_img">
+            <a href="/courses"><img src="/images/image4science.jpg" alt="" class="vplay" /></a>
+        </div>
+        <div class="mov_img">
+            <a href="/courses"><img src="/images/image5science.png" alt="" class="vplay" /></a>
+        </div>
+      </div>
+    </section>
+    <section class="Thriller">
+      <div class="sec_header">
+        <h3>COMMUNICATION SKILLS</h3>
+      </div>
+      <div class="film_sec">
+        <div class="mov_img">
+          <a href="/courses"><img src="/images/image2science.png" alt="" class="vplay" /></a>
+        </div>
+        <div class="mov_img">
+            <a href="/courses"><img src="/images/image4science.jpg" alt="" class="vplay" /></a>
+        </div>
+        <div class="mov_img">
+            <a href="/courses"><img src="/images/image1science.jpg" alt="" class="vplay" /></a>
+        </div>
+        <div class="mov_img">
+            <a href="/courses"><img src="/images/image3science.jpg" alt="" class="vplay" /></a>
+        </div>
+        <div class="mov_img">
+            <a href="/courses"><img src="/images/image1science.jpg" alt="" class="vplay" /></a>
+        </div>
+      </div>
+    </section>
+    <section class="Children">
+      <div class="sec_header">
+        <h3>ARTS AND LITERATURE</h3>
+      </div>
+      <div class="film_sec">
+        <div class="mov_img">
+        <a href="/courses"><img src="/images/image5science.png" alt="" class="vplay" /></a>
+        </div>
+        <div class="mov_img">
+            <a href="/courses"><img src="/images/image2science.png" alt="" class="vplay" /></a>
+        </div>
+        <div class="mov_img">
+            <a href="/courses"><img src="/images/image3science.jpg" alt="" class="vplay" />
+        </div>
+        <div class="mov_img">
+            <a href="/courses"><img src="/images/image1science.jpg" alt="" class="vplay" /></a>
+        </div>
+        <div class="mov_img">
+            <a href="/courses"><img src="/images/image2science.png" alt="" class="vplay" /></a>
+        </div>
+      </div>
+    </section>
+         
+</section>
+  </div>
+
+</body>
+</html>

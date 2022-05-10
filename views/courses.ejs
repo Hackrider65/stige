@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iqra Institute | Course</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    border: 0;
+    font-family: poppins, sans-serif;
+}
+body{
+    
+   background-color: antiquewhite;
+    height: 100%;
+    margin: 0;
+    min-height: 100vh;
+}
+.logo{
+    width: 150px;
+    cursor: pointer;
+}
+
+.navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px rgb(102, 33, 102);
+    position: absolute;
+    padding: 6px 0;
+    background-color: #fff;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    
+}
+.navbar ul li ::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: rgb(114, 18, 114);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+    display: block;
+}
+.navbar ul li :hover::after{
+    width: 100%;
+}
+.wrapper{
+    position: absolute;
+    width: 85%;
+    padding: 35px 0;
+    margin: auto;
+    margin: 0 100px;
+    align-items: center;
+    margin-top: 100px;
+    color: purple;
+}
+.wrapper .header{
+    text-align: center;
+    font-style: bold;
+    font-size: 40px;
+    font-weight: 300;
+}
+.wrapper .body1{
+    background-color: antiquewhite;
+    margin-top: 15px;
+    font-style: bold;
+    font-size: 20px;
+    font-weight: 300;
+
+    
+}
+.wrapper .body1 p{
+    margin-right: 25px;
+    margin-left: 25px;
+}
+.wrapper .body1 .p1{
+    text-align: center;
+    font-weight: 300;
+    font-size: 30px;
+    margin-right: 25px;
+    margin-left: 25px;
+
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="/images/logo.png" alt="" class="logo">
+        <div class="mainMenu">
+            
+            <ul >
+                <li><a href="/">HOME</a></li>
+                <li><a class="nav-link" href="/course">EXPLORE COURSES</a></li>
+                <li><a href="/userprofile">DASHBOARD</a></li>
+                <li><a href="/task">TASK MANAGER</a></li>
+                <li><a href="/logout">LOG OUT</a></li>
+            </ul>
+        </div>
+    
+    </nav>
+    <div class="wrapper">
+        <div class = "header">HEY LEARNER, Here starts your journey with  Web development <br> STEP 1 - LEARN THE BASICS</div>
+        <div class="body1">
+        
+        <p>Every Web Developer must have a basic understanding of HTML, CSS, and JavaScript. <br>
+
+            Responsive Web Design is used in all types of modern web development. <br>
+            
+            ECMAScript 5 (JavaScript 5) is supported in all modern browsers. Take a good look at it, especially the new array functions. <br>
+            When you feel comfortable with HTML and CSS, it is time to dig deeper. You should learn how to use Maps, Fonts and Icons in HTML. On the JavaScript side, you should learn how to access the HTML DOM. You should also learn how to use AJAX and JSON for making server requests. <br>
+            <br>
+           
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/qz0aGYrrlhU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </iframe>
+         
+        </p>
+        <div class = "header">HEY LEARNER, Congratulations on completing the STEP 1, moving on to the next step!<br> STEP 2 - CLONE A PROJECT</div>
+        <div class="body1">
+        
+        <p>Every Web Developer must have a basic understanding of HTML, CSS, and JavaScript. <br>
+
+            Responsive Web Design is used in all types of modern web development. <br>
+            
+            ECMAScript 5 (JavaScript 5) is supported in all modern browsers. Take a good look at it, especially the new array functions. <br>
+            When you feel comfortable with HTML and CSS, it is time to dig deeper. You should learn how to use Maps, Fonts and Icons in HTML. On the JavaScript side, you should learn how to access the HTML DOM. You should also learn how to use AJAX and JSON for making server requests. <br>
+            <br>
+           
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/sePm-Bz1J34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </iframe> <br>
+         
+         
+        </p>
+        <p1> You've completed this course successfully! You may update your achievement in the <a href="/task">task manager.</a>  <br> Thankyou!</p1>
+    </div>
+     </div>
+    </div>
+   
+    
+
+</header>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iqra Institute | Home</title>
+    <style>
+        
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    border: 0;
+    font-family: poppins, sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: url(/images/bg.jpg);
+    background-size: cover;
+}
+.logo{
+    width: 150px;
+    cursor: pointer;
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    margin: 0 100px;
+    border-bottom: solid 1px rgb(102, 33, 102);
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: rgb(235, 217, 235);
+}
+.navbar ul li ::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: rgb(80, 12, 80);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+    color: rgb(235, 217, 235);
+    display: block;
+}
+.navbar ul li :hover::after{
+    width: 100%;
+}
+
+.navbar ul li a{
+  
+    color: rgb(235, 217, 235);
+    transition: -5s;
+  }
+  .navbar ul li a:hover {
+    color: rgb(80, 12, 80);
+    display: block;
+  }
+
+
+.body{
+    position: absolute;
+    width: 85%;
+    padding: 35px 0;
+    margin: auto;
+    margin: 0 100px;
+    text-align: center;
+    align-items: center;
+    margin-top: 200px;
+    color: rgb(235, 217, 235);
+}
+
+.body h1{
+    font-size: 3.5rem;
+    font-weight: 900;
+}
+.body p{
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+.body a{
+    padding: 14px 25px;
+    display: inline-block;
+    text-decoration: none;
+    width: 200px;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid rgb(80, 12, 80);
+    background: transparent;
+    cursor: pointer;
+    color: rgb(235, 217, 235);
+    position: relative;
+}
+span{
+    background: rgb(80, 12, 80);
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+    opacity: 0.3;
+}
+
+a:hover span{
+    width: 100%;
+}
+.mainMenu .closeMenu{
+    display:none;
+}
+.navbar .openMenu{
+    display: none;
+}
+
+
+@media(max-width: 768px){
+    .navbar{
+        margin: 5px;
+        padding: 15px 45px;
+    }
+    .body h1{
+        font-size: 20px;  
+    }
+    .body p{
+        font-size: 12px;
+        
+    }
+    .body{
+       padding: 0 0;
+       margin-left: 3px;
+       margin-right: 5px;
+    }
+    .navbar ul li{
+        position: relative;
+        display: block ;
+        margin: 10px 0;
+        
+    }
+    .mainMenu{
+        position: absolute;
+        background-color: rgb(164, 13, 202);
+        height: 100vh;
+        width: 32%;
+        top: 0px;
+        right: 0px;
+        text-align: left;
+        z-index: 2;
+        margin-left: 0;
+        
+    }
+.mainMenu .closeMenu{
+        display: block;
+        width: 20px;
+        margin-top: 15px;
+        cursor: pointer;
+    }
+    .navbar .openMenu{
+        display: block;
+        width: 30px;
+        margin-top: 15px;
+        cursor: pointer;
+    }
+    
+    
+}
+    </style>
+</head>
+<body>
+    <section class="header">
+    <header>
+        <nav class="navbar">
+            <img src="/images/logo.png" alt="" class="logo">
+        <div class="mainMenu">
+            
+            <ul >
+                <% if(auth==="logged" ){ %>
+               <img src="/images/close.png" alt="" class="closeMenu">
+                
+                <li><a href="/course">COURSES</a></li>
+                <li><a href="/task">TASKS</a></li>
+                <li><a href="/userprofile">MY PROFILE</a></li>
+                <li><a href="/logout">LOG OUT</a></li>
+                <% } else { %>
+                <li><a href="/login">LOGIN</a></li>
+                <li><a href="/register">REGISTER</a></li>
+                
+            </ul>
+            <% } %> 
+        </div>
+    <img src="/images/menu.png" alt="" class="openMenu" width="30px" id="demo">
+    </nav>
+    </header>
+</section>
+<% if(auth==="logged" ){ %>
+    <section class="body">
+        <div class="middle">
+        <h1>EXPLORE LEARN EVOLVE</h1>    
+        <p>Register to explore our courses</p>
+        <a href="/course" target="_blank"><span></span>COURSES</a>
+        </div>
+        <% } else { %>
+            <section class="body">
+                <div class="middle">
+                <h1>EXPLORE LEARN EVOLVE</h1>    
+                <p>Register to explore our courses</p>
+                <a href="/register" target="_blank"><span></span>REGISTER HERE</a>
+                </div>       
+                <% } %> 
+    <script>
+    const mainMenu = document.querySelector('.mainMenu');
+        const closeMenu = document.querySelector('.closeMenu');
+        const openMenu = document.querySelector('.openMenu');
+        
+        
+        openMenu.addEventListener('click',show);
+        closeMenu.addEventListener('click', close);
+        
+        function show(){
+            
+            mainMenu.style.display ='flex';
+            
+        }
+        
+        function close(){
+            mainMenu.style.right = "-300px";
+        }
+        function show(){
+            mainMenu.style.right = "0px"
+        }
+        </script>
+</body>
+</html>
